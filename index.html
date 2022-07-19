@@ -15,8 +15,8 @@
     <main class="container mx-auto ">
         <div class="container grid grid-cols-2">
             <!-- image section  -->
-            <div class="flex items-center justify-center ">
-                <img class="justify-center w-3/4 p-10 text-center " src="images/mac.png" alt="mac image" srcset="">
+            <div class="flex justify-center">
+                <img class="mt-20 w-96 h-96 " src="images/mac.png" alt="mac image" srcset="">
             </div>
             <!-- content section  -->
             <div class="container px-8 mt-10">
@@ -118,7 +118,7 @@
                                 <h3 class="col-span-3 my-2">Delivery charge</h3>
                                 <h3 class="my-2">$<span>0</span></h3>
                             </div>
-                            <hr>
+                            <hr class="border-b border-black">
                         </div>
                         <div></div>
                     </div>
@@ -129,18 +129,28 @@
                                 <h3 class="col-span-3 my-2">Total Price</h3>
                                 <h3 class="my-2 ">$<span>1299</span></h3>
                             </div>
-                            <hr>
+
                         </div>
                         <div></div>
                     </div>
                     <!-- cuppon code section  -->
-                    <div class="">
-                        <h4 class="mt-3 text-lg font-extralight">Add Promo code</h4>
-
-                    </div>
+                    <section>
+                        <h4 class="mt-3 text-xl font-light">Add Promo code</h4>
+                        <div class="grid grid-cols-2">
+                            <div>
+                                <div class="grid grid-cols-4 gap-2 mt-2 text-sm font-normal">
+                                    <input class="col-span-3 border-2 border-black rounded" type="text">
+                                    <button class="px-2 py-1 text-lg text-white bg-red-500 rounded">Apply</button>
+                                </div>
+                            </div>
+                            <div></div>
+                        </div>
+                    </section>
                 </section>
             </div>
         </div>
+        <hr class="mt-4">
+        <h2 class="my-4 mb-10 text-4xl text-center">Total: $<span>1299</span></h2>
     </main>
     <script src="js/app.js"></script>
 </body>

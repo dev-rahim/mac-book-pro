@@ -30,10 +30,11 @@ function totalPrice() {
 // cupon code section 
 function cuponCode() {
     document.getElementById('btn-apply').addEventListener('click', function () {
-        const inputFild = document.getElementById('cupon-input').value;
-        if (inputFild == 'code') {
+        const inputFild = document.getElementById('cupon-input');
+        if (inputFild.value == 'code') {
             finalTotal.innerText = totalPrice();
         }
+        inputFild.value = '';
     })
 }
 

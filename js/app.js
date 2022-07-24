@@ -7,48 +7,12 @@ const primaryTotal = document.getElementById('primary-total');
 const finalTotal = document.getElementById('final-total');
 
 // all button events 
-function memoryButton() {
-    // btn memory 
-    document.getElementById('btn-8gb').addEventListener('click', function () {
-        bestPriceId.innerText = 1299;
-        extraMemoryCostId.innerText = 0;
-        cuponCode();
-        totalPrice();
-
-    })
-    document.getElementById('btn-16gb').addEventListener('click', function () {
-        extraMemoryCostId.innerText = '180';
+function button(btnId, priceId, price,) {
+    document.getElementById(btnId).addEventListener('click', function () {
+        document.getElementById(priceId).innerText = price;
         cuponCode();
         totalPrice();
     })
-    // btn storage
-    document.getElementById('btn-256gb').addEventListener('click', function () {
-        extraStorageCostId.innerText = '0';
-        totalPrice();
-        cuponCode();
-    })
-    document.getElementById('btn-512gb').addEventListener('click', function () {
-        extraStorageCostId.innerText = '100';
-        cuponCode();
-        totalPrice();
-    })
-    document.getElementById('btn-1tb').addEventListener('click', function () {
-        extraStorageCostId.innerText = '180';
-        cuponCode();
-        totalPrice();
-    })
-    // delevary charge
-    document.getElementById('btn-aug-25').addEventListener('click', function () {
-        delevaryChargeId.innerText = '0';
-        cuponCode();
-        totalPrice();
-    })
-    document.getElementById('btn-aug-18').addEventListener('click', function () {
-        delevaryChargeId.innerText = '20';
-        cuponCode();
-        totalPrice();
-    })
-
 }
 // total price section 
 function totalPrice() {
@@ -69,11 +33,19 @@ function cuponCode() {
         const inputFild = document.getElementById('cupon-input').value;
         if (inputFild == 'code') {
             finalTotal.innerText = totalPrice();
-        } else {
-
         }
     })
 }
 
+// btn memory
+button('btn-8gb', 'extra-memory-cost', 0);
+button('btn-16gb', 'extra-memory-cost', 180);
+// btn storage
+button('btn-256gb', 'extra-storage-cost', 0);
+button('btn-512gb', 'extra-storage-cost', 100);
+button('btn-1tb', 'extra-storage-cost', 180);
+// delevary charge
+button('btn-aug-25', 'delevary-charge', 0);
+button('btn-aug-18', 'delevary-charge', 20);
 cuponCode();
 memoryButton();

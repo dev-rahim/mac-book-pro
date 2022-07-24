@@ -105,7 +105,7 @@
                         </div>
                         <div></div>
                     </div>
-                    <!-- xtra Storage Cost -->
+                    <!-- Extra Storage Cost -->
                     <div class="grid grid-cols-2 mt-1">
                         <div>
                             <div class="grid grid-cols-4">
@@ -132,7 +132,7 @@
                         <div>
                             <div class="grid grid-cols-4">
                                 <h3 class="col-span-3 my-2">Total Price</h3>
-                                <h3 class="my-2 ">$<span id="primary-total">0</span></h3>
+                                <h3 class="my-2 ">$<span id="primary-total">1299</span></h3>
                             </div>
 
                         </div>
@@ -144,8 +144,10 @@
                         <div class="grid grid-cols-2">
                             <div>
                                 <div class="grid grid-cols-4 gap-2 mt-2 text-sm font-normal">
-                                    <input class="col-span-3 border-2 border-black rounded" type="text">
-                                    <button class="px-2 py-1 text-lg text-white bg-red-500 rounded">Apply</button>
+                                    <input id="cupon-input" class="col-span-3 border-2 border-black rounded"
+                                        type="text">
+                                    <button id="btn-apply"
+                                        class="px-2 py-1 text-lg text-white bg-red-500 rounded">Apply</button>
                                 </div>
                             </div>
                             <div></div>
@@ -155,7 +157,7 @@
             </div>
         </div>
         <hr class="mt-4">
-        <h2 class="my-4 mb-10 text-4xl text-center">Total: $<span>1299</span></h2>
+        <h2 class="my-4 mb-10 text-4xl text-center">Total:$<span id="final-total">1299</span></h2>
     </main>
     <script src="js/app.js"></script>
 </body>
